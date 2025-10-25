@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 JavaScript Fun for Kids!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 JavaScript Fun for Kids! 🎨</h1>
+            <p class="subtitle">Learn to code by playing and creating amazing things!</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar">0%</div>
+            </div>
+        </header>
+
+        <div class="lesson-nav">
+            <button class="lesson-btn active" onclick="showLesson(1)">🎯 Lesson 1: Say Hello!</button>
+            <button class="lesson-btn" onclick="showLesson(2)">🎨 Lesson 2: Magic Boxes</button>
+            <button class="lesson-btn" onclick="showLesson(3)">🔢 Lesson 3: Numbers!</button>
+            <button class="lesson-btn" onclick="showLesson(4)">🎪 Lesson 4: Decisions</button>
+            <button class="lesson-btn" onclick="showLesson(5)">🎵 Lesson 5: Loops</button>
+            <button class="lesson-btn" onclick="showLesson(6)">🎮 Lesson 6: Game!</button>
+        </div>
+
+        <!-- Lesson 1 -->
+        <div class="lesson-content active" id="lesson1">
+            <div class="section">
+                <h2>🎯 Lesson 1: Say Hello to JavaScript!</h2>
+                <div class="explanation">
+                    <p>Hey there, young coder! 👋 JavaScript makes websites come alive!</p>
+                    <p>Let's learn <span class="highlight">console.log()</span> - it makes your computer talk!</p>
+                </div>
+                <h3>📝 Example:</h3>
+                <div class="code-box"><code>console.log("Hello, I'm learning!");</code></div>
+                <div class="tip">Words inside " " are what your computer will say!</div>
+                <div class="interactive-demo">
+                    <button class="btn btn-primary" onclick="runDemo1()">Try It! 🎉</button>
+                    <div class="output-box" id="demo1Output"></div>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Exercise 1: Say Your Name!</h3>
+                <p>Write: console.log("Hello, my name is YOUR-NAME!");</p>
+                <textarea class="exercise-input" id="ex1-1"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('1-1')">Run! 🚀</button>
+                <button class="btn btn-success" onclick="showHint('1-1')">Need Help? 💡</button>
+                <div class="result" id="result1-1"></div>
+                <div class="output-box" id="output1-1"></div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Exercise 2: Three Things!</h3>
+                <p>Use console.log() THREE times! Tell us your favorite: color, animal, and food!</p>
+                <textarea class="exercise-input" id="ex1-2"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('1-2')">Run! 🚀</button>
+                <button class="btn btn-success" onclick="showHint('1-2')">Need Help? 💡</button>
+                <div class="result" id="result1-2"></div>
+                <div class="output-box" id="output1-2"></div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Exercise 3: Emoji Party! 🎉</h3>
+                <p>Add 3+ emojis to your message! Try: 🚀🎨🎮😊🌈</p>
+                <textarea class="exercise-input" id="ex1-3"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('1-3')">Run! 🚀</button>
+                <button class="btn btn-success" onclick="showHint('1-3')">Need Help? 💡</button>
+                <div class="result" id="result1-3"></div>
+                <div class="output-box" id="output1-3"></div>
+            </div>
+
+            <button class="btn btn-primary" style="margin-top:20px;font-size:1.3em;" onclick="completeLesson(1)">Finish Lesson 1! 🎉</button>
+        </div>
+
+        <!-- Lesson 2 -->
+        <div class="lesson-content" id="lesson2">
+            <div class="section">
+                <h2>🎨 Lesson 2: Magic Boxes (Variables)!</h2>
+                <div class="explanation">
+                    <p>Variables are magic boxes 📦 that store stuff!</p>
+                    <p>Use <span class="highlight">let</span> to create them!</p>
+                </div>
+                <h3>📝 Example:</h3>
+                <div class="code-box"><code>let myName = "Luna";
+let myAge = 7;
+console.log("Hi! I'm " + myName);</code></div>
+                <div class="tip">"let" creates a box, "=" puts something in it!</div>
+                <div class="interactive-demo">
+                    <button class="btn btn-primary" onclick="runDemo2()">See Magic! ✨</button>
+                    <div class="output-box" id="demo2Output"></div>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Exercise 1: Your Info!</h3>
+                <p>Create variables for: name, age, favorite animal. Show them with console.log()!</p>
+                <textarea class="exercise-input" id="ex2-1"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('2-1')">Run! 🚀</button>
+                <button class="btn btn-success" onclick="showHint('2-1')">Need Help? 💡</button>
+                <div class="result" id="result2-1"></div>
+                <div class="output-box" id="output2-1"></div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Exercise 2: Color Magic!</h3>
+                <p>Create: let currentColor = "blue"; (or any color!)</p>
+                <textarea class="exercise-input" id="ex2-2"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('2-2')">Change Color! 🎨</button>
+                <button class="btn btn-success" onclick="showHint('2-2')">Need Help? 💡</button>
+                <div class="result" id="result2-2"></div>
+                <div class="color-demo" id="colorBox"></div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Exercise 3: Story Time!</h3>
+                <p>Create: character, place, object. Make a story like: "Once upon a time, Luna went to the beach and found a starfish!"</p>
+                <textarea class="exercise-input" id="ex2-3"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('2-3')">Tell Story! 📖</button>
+                <button class="btn btn-success" onclick="showHint('2-3')">Need Help? 💡</button>
+                <div class="result" id="result2-3"></div>
+                <div class="output-box" id="output2-3"></div>
+            </div>
+
+            <button class="btn btn-primary" style="margin-top:20px;font-size:1.3em;" onclick="completeLesson(2)">Finish Lesson 2! 🎉</button>
+        </div>
+
+        <!-- Lesson 3 -->
+        <div class="lesson-content" id="lesson3">
+            <div class="section">
+                <h2>🔢 Lesson 3: Numbers Game!</h2>
+                <div class="explanation">
+                    <p>JavaScript is great at math! 🧮</p>
+                    <p>+ add, - subtract, * multiply, / divide</p>
+                </div>
+                <h3>📝 Example:</h3>
+                <div class="code-box"><code>let cookies = 5 + 3;
+console.log("I have " + cookies + " cookies!");</code></div>
+                <div class="interactive-demo">
+                    <button class="btn btn-primary" onclick="runDemo3()">Calculate! 🧮</button>
+                    <div class="output-box" id="demo3Output"></div>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Exercise 1: Candy Math!</h3>
+                <p>You have 12 candies, eat 3, friend gives 5. How many left?</p>
+                <textarea class="exercise-input" id="ex3-1"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('3-1')">Count! 🍬</button>
+                <button class="btn btn-success" onclick="showHint('3-1')">Need Help? 💡</button>
+                <div class="result" id="result3-1"></div>
+                <div class="output-box" id="output3-1"></div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Exercise 2: Pizza Share!</h3>
+                <p>16 pizza slices ÷ 4 people = ? Use /</p>
+                <textarea class="exercise-input" id="ex3-2"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('3-2')">Share! 🍕</button>
+                <button class="btn btn-success" onclick="showHint('3-2')">Need Help? 💡</button>
+                <div class="result" id="result3-2"></div>
+                <div class="output-box" id="output3-2"></div>
+            </div>
+
+            <button class="btn btn-primary" style="margin-top:20px;font-size:1.3em;" onclick="completeLesson(3)">Finish Lesson 3! 🎉</button>
+        </div>
+
+        <!-- Lesson 4 -->
+        <div class="lesson-content" id="lesson4">
+            <div class="section">
+                <h2>🎪 Lesson 4: Making Decisions!</h2>
+                <div class="explanation">
+                    <p><span class="highlight">if</span> helps make choices! 🤔</p>
+                    <p>IF this is true, THEN do this!</p>
+                </div>
+                <h3>📝 Example:</h3>
+                <div class="code-box"><code>let weather = "sunny";
+if (weather === "sunny") {
+    console.log("Go to park! ☀️");
+}</code></div>
+                <div class="tip">Use === to check if things are equal!</div>
+                <div class="interactive-demo">
+                    <button class="btn btn-primary" onclick="runDemo4()">Decide! 🎯</button>
+                    <div class="output-box" id="demo4Output"></div>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Exercise 1: Mood Check!</h3>
+                <p>let mood = "happy" or "sad". Show different messages!</p>
+                <textarea class="exercise-input" id="ex4-1"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('4-1')">Check! 😊</button>
+                <button class="btn btn-success" onclick="showHint('4-1')">Need Help? 💡</button>
+                <div class="result" id="result4-1"></div>
+                <div class="output-box" id="output4-1"></div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Exercise 2: Animal Sounds!</h3>
+                <p>Choose animal. IF dog, say "Woof!", IF cat, say "Meow!" 🐾</p>
+                <textarea class="exercise-input" id="ex4-2"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('4-2')">Animals! 🐾</button>
+                <button class="btn btn-success" onclick="showHint('4-2')">Need Help? 💡</button>
+                <div class="result" id="result4-2"></div>
+                <div class="output-box" id="output4-2"></div>
+            </div>
+
+            <button class="btn btn-primary" style="margin-top:20px;font-size:1.3em;" onclick="completeLesson(4)">Finish Lesson 4! 🎉</button>
+        </div>
+
+        <!-- Lesson 5 -->
+        <div class="lesson-content" id="lesson5">
+            <div class="section">
+                <h2>🎵 Lesson 5: Loops - Do it Again!</h2>
+                <div class="explanation">
+                    <p>Loops repeat things! 🔄 No more typing same code!</p>
+                </div>
+                <h3>📝 Example:</h3>
+                <div class="code-box"><code>for (let i = 1; i <= 5; i++) {
+    console.log("Count: " + i);
+}</code></div>
+                <div class="tip">This counts from 1 to 5!</div>
+                <div class="interactive-demo">
+                    <button class="btn btn-primary" onclick="runDemo5()">Loop! 🔄</button>
+                    <div class="output-box" id="demo5Output"></div>
+                </div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Exercise 1: Count to 10!</h3>
+                <p>Make a loop that counts 1 to 10!</p>
+                <textarea class="exercise-input" id="ex5-1"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('5-1')">Count! 🔢</button>
+                <button class="btn btn-success" onclick="showHint('5-1')">Need Help? 💡</button>
+                <div class="result" id="result5-1"></div>
+                <div class="output-box" id="output5-1"></div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Exercise 2: Star Pattern!</h3>
+                <p>Print "⭐" 7 times using a loop!</p>
+                <textarea class="exercise-input" id="ex5-2"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('5-2')">Stars! ⭐</button>
+                <button class="btn btn-success" onclick="showHint('5-2')">Need Help? 💡</button>
+                <div class="result" id="result5-2"></div>
+                <div class="output-box" id="output5-2"></div>
+            </div>
+
+            <button class="btn btn-primary" style="margin-top:20px;font-size:1.3em;" onclick="completeLesson(5)">Finish Lesson 5! 🎉</button>
+        </div>
+
+        <!-- Lesson 6 -->
+        <div class="lesson-content" id="lesson6">
+            <div class="section">
+                <h2>🎮 Lesson 6: Build a Guessing Game!</h2>
+                <div class="explanation">
+                    <p>Let's make a real game! 🎯</p>
+                </div>
+                <h3>📝 Your Mission:</h3>
+                <p>Create a number guessing game! Computer picks 1-10, you guess!</p>
+                <div class="code-box"><code>let secretNumber = 7;
+let myGuess = 5;
+if (myGuess === secretNumber) {
+    console.log("You won! 🎉");
+} else {
+    console.log("Try again!");
+}</code></div>
+            </div>
+
+            <div class="exercise">
+                <h3>🎯 Final Challenge!</h3>
+                <p>Build the guessing game! Set secretNumber and myGuess!</p>
+                <textarea class="exercise-input" id="ex6-1" style="min-height:150px;"></textarea>
+                <button class="btn btn-primary" onclick="checkExercise('6-1')">Play Game! 🎮</button>
+                <button class="btn btn-success" onclick="showHint('6-1')">Need Help? 💡</button>
+                <div class="result" id="result6-1"></div>
+                <div class="output-box" id="output6-1"></div>
+            </div>
+
+            <div class="interactive-demo">
+                <h3>🎮 Bonus: Click Game!</h3>
+                <p>Click the button as fast as you can!</p>
+                <button class="btn btn-primary" onclick="playClickGame()">Start! 🚀</button>
+                <div class="output-box" id="clickGameOutput">Clicks: 0</div>
+            </div>
+
+            <button class="btn btn-primary" style="margin-top:20px;font-size:1.3em;" onclick="completeLesson(6)">Finish All Lessons! 🏆</button>
+        </div>
+    </div>
+
+    <canvas id="celebration"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
